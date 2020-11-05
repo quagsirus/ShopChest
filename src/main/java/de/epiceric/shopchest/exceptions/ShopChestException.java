@@ -51,7 +51,7 @@ public class ShopChestException extends RuntimeException {
 	String lastAt = "";
 	for (Throwable cause = this.getCause(); cause != null; cause = cause.getCause()) {
 	    causeMessage = cause.getMessage();
-	    if (causeMessage != null && !causeMessage.isBlank()) {
+	    if (causeMessage != null && !causeMessage.trim().isEmpty()) {
 
 		String[] causedBy = causeMessage.split(BREAKLINE_REGEX);
 
